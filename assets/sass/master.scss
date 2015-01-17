@@ -2,21 +2,103 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	max-width: 100%;
+	overflow-x: hidden;
 }
-
+.overLay {
+	z-index: 0;
+	width:100vw;
+	height:100vh;
+	background: rgba(0,0,0,.5);
+}
 footer {
-	.bread-crums {
-		height: 30px;
-		width: 100%;
-		background: #038294;
+	a, a:hover, a:visited, a:active{
+		color: white;
+		text-decoration: none;
 	}
-	.navigation {
+	z-index: 2;
+	position: fixed;
+	height:80px;
+	width: 100%;
+	top: -80px;
+	font-family: 'Roboto';
+	color: white;
+	#navBar {
 		height: 80px;
 		width: 100%;
-		background: #293a3d;
+		background: #00B9DC;
+		.navigation {
+			text-align: right;
+			a, a:hover, a:visited, a:active{
+				color: white;
+				text-decoration: none;
+			}
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+					display: inline-block;
+					list-style: none;
+					font-size: 20px;
+					font-weight: 100;
+					margin-right: 10px;
+					line-height: 80px;
+				}
+				li:last-child {
+					margin-right: 0;
+				}
+			}
+			.mobileNavToggle {
+				height: 60px;
+				width: 60px;
+				position:absolute;
+				margin-top: 10px;
+				background: url('../images/icons/menu.png');
+			}
+			
+		}
+		h1 {
+			font-weight: 100;
+			padding-left: 10px;
+			font-size: 25px;
+			line-height: 80px;
+			margin: 0;
+		}
+		// @media (min-width: 768px) {
+			
+		// }
+		// @media (min-width: 992px) {
+			
+		// }
+		@media (min-width: 1200px) {
+			h1 {
+				font-size: 50px;
+			}
+			
+		}
 	}
-	position: fixed;
-	height:80px + 30px;
+}
+
+ul.mobileNav {
 	width: 100%;
-	bottom: 0;
+	position: absolute;
+	background: #008199;
+	display: none;
+	bottom:80px;
+	margin: 0;
+	padding: 0;
+	li {
+		display:block;
+		width: 100%;
+		height: 50px;
+		text-align: center;
+		list-style: none;
+		font-size: 20px;
+		font-weight: 100;
+		line-height: 50px;
+		a, a:hover, a:visited, a:active{
+			color: white;
+			text-decoration: none;
+		}
+	}
 }

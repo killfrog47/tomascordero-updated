@@ -1,18 +1,81 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400);
 html, body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden; }
+
+.overLay {
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); }
 
 footer {
+  z-index: 2;
   position: fixed;
-  height: 110px;
+  height: 80px;
   width: 100%;
-  bottom: 0; }
-  footer .bread-crums {
-    height: 30px;
-    width: 100%;
-    background: #038294; }
-  footer .navigation {
+  top: -80px;
+  font-family: 'Roboto';
+  color: white; }
+  footer a, footer a:hover, footer a:visited, footer a:active {
+    color: white;
+    text-decoration: none; }
+  footer #navBar {
     height: 80px;
     width: 100%;
-    background: #293a3d; }
+    background: #00B9DC; }
+    footer #navBar .navigation {
+      text-align: right; }
+      footer #navBar .navigation a, footer #navBar .navigation a:hover, footer #navBar .navigation a:visited, footer #navBar .navigation a:active {
+        color: white;
+        text-decoration: none; }
+      footer #navBar .navigation ul {
+        margin: 0;
+        padding: 0; }
+        footer #navBar .navigation ul li {
+          display: inline-block;
+          list-style: none;
+          font-size: 20px;
+          font-weight: 100;
+          margin-right: 10px;
+          line-height: 80px; }
+        footer #navBar .navigation ul li:last-child {
+          margin-right: 0; }
+      footer #navBar .navigation .mobileNavToggle {
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        margin-top: 10px;
+        background: url("../images/icons/menu.png"); }
+    footer #navBar h1 {
+      font-weight: 100;
+      padding-left: 10px;
+      font-size: 25px;
+      line-height: 80px;
+      margin: 0; }
+    @media (min-width: 1200px) {
+      footer #navBar h1 {
+        font-size: 50px; } }
+
+ul.mobileNav {
+  width: 100%;
+  position: absolute;
+  background: #008199;
+  display: none;
+  bottom: 80px;
+  margin: 0;
+  padding: 0; }
+  ul.mobileNav li {
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 50px; }
+    ul.mobileNav li a, ul.mobileNav li a:hover, ul.mobileNav li a:visited, ul.mobileNav li a:active {
+      color: white;
+      text-decoration: none; }
